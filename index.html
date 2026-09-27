@@ -1,1305 +1,1170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday Mr Arman 🎂</title>
-
-<style>
-
-/* ======================
-   BASIC
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: "Poppins", "Times New Roman", serif;
-    color: white;
-}
-
-
-/* =========================
-   STARS
-======================== */
-
-.stars {
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.star {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 2s infinite alternate;
-}
-
-@keyframes twinkle {
-
-    from {
-        opacity: 0.2;
-        transform: scale(0.7);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1.4);
-    }
-}
-
-
-/* =========================
-   PAGE 1
-========================= */
-
-#page1 {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    z-index: 2;
-
-    background:
-        linear-gradient(
-            135deg,
-            #826ef1,
-            #5513cf,
-            #8e44ad
-        );
-
-    transition: 1s ease;
-}
-
-
-/* =========================
-   FIRST CARD
-========================= */
-
-.card {
-
-    width: 90%;
-    max-width: 650px;
-
-    padding: 50px 30px;
-
-    text-align: center;
-
-    border-radius: 30px;
-
-    background:
-        rgba(255,255,255,0.15);
-
-    backdrop-filter:
-        blur(15px);
-
-    -webkit-backdrop-filter:
-        blur(15px);
-
-    border:
-        1px solid rgba(255,255,255,0.3);
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,0.25);
-
-    animation:
-        appear 1.5s ease;
-}
-
-@keyframes appear {
-
-    from {
-        opacity: 0;
-        transform:
-            translateY(50px)
-            scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
-
-
-/* =========================
-   HEART
-========================= */
-
-.cake {
-
-    font-size: 80px;
-
-    margin-bottom: 10px;
-
-    animation:
-        heartbeat 1.5s infinite;
-}
-
-@keyframes heartbeat {
-
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.15);
-    }
-}
-
-
-/* =========================
-   HEADINGS
-========================= */
-
-h1 {
-
-    font-size:
-        clamp(42px, 9vw, 75px);
-
-    margin-bottom: 10px;
-
-    text-shadow:
-        0 5px 15px rgba(0,0,0,0.25);
-
-    background:
-        linear-gradient(
-            to right,
-            #fff,
-            #ffe1ec
-        );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.name {
-
-    font-size:
-        clamp(28px, 6vw, 45px);
-
-    font-weight: bold;
-
-    margin-bottom: 20px;
-}
-
-.message {
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.button {
-
-    padding:
-        14px 30px;
-
-    border: none;
-
-    border-radius: 50px;
-
-    background: white;
-
-    color: #393ce6;
-
-    font-size: 16px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition:
-        0.3s;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.2);
-}
-
-.button:hover {
-
-    transform:
-        scale(1.08);
-
-    box-shadow:
-        0 12px 25px rgba(0,0,0,0.3);
-}
-
-
-/* =========================
-   BALLOONS
-========================= */
-
-.balloon {
-
-    position: fixed;
-
-    bottom: -150px;
-
-    font-size: 65px;
-
-    z-index: 1;
-
-    animation:
-        fly 8s linear infinite;
-}
-
-.b1 {
-    left: 8%;
-    animation-delay: 1s;
-}
-
-.b2 {
-    left: 80%;
-    animation-delay: 3s;
-}
-
-.b3 {
-    left: 45%;
-    animation-delay: 5s;
-}
-
-@keyframes fly {
-
-    0% {
-        transform:
-            translateY(0)
-            rotate(-5deg);
-
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    50% {
-        transform:
-            translateY(-55vh)
-            rotate(8deg);
-    }
-
-    100% {
-        transform:
-            translateY(-120vh)
-            rotate(-8deg);
-
-        opacity: 0;
-    }
-}
-
-
-/* =========================
-   CONFETTI
-========================= */
-
-.confetti {
-
-    position: fixed;
-
-    width: 10px;
-    height: 10px;
-
-    top: -20px;
-
-    z-index: 100;
-
-    animation:
-        fall 4s linear forwards;
-}
-
-@keyframes fall {
-
-    to {
-
-        transform:
-            translateY(110vh)
-            rotate(720deg);
-    }
-}
-
-
-/* =========================
-   PAGE 2
-========================= */
-
-#page2 {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 20;
-
-    display: none;
-
-    justify-content: center;
-    align-items: center;
-
-    padding: 25px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff758c,
-            #ff7eb3,
-            #8e44ad,
-            #6c5ce7
-        );
-
-    background-size:
-        400% 400%;
-
-    animation:
-        gradientMove 10s ease infinite;
-}
-
-@keyframes gradientMove {
-
-    0% {
-        background-position:
-            0% 50%;
-    }
-
-    50% {
-        background-position:
-            100% 50%;
-    }
-
-    100% {
-        background-position:
-            0% 50%;
-    }
-}
-
-
-/* =========================
-   WISH CARD
-========================= */
-
-.wish-card {
-
-    width: 95%;
-
-    max-width: 750px;
-
-    max-height: 90vh;
-
-    overflow-y: auto;
-
-    padding: 45px 35px;
-
-    text-align: center;
-
-    border-radius: 35px;
-
-    background:
-        rgba(255,255,255,0.16);
-
-    backdrop-filter:
-        blur(20px);
-
-    -webkit-backdrop-filter:
-        blur(20px);
-
-    border:
-        1px solid rgba(255,255,255,0.35);
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,0.3);
-
-    animation:
-        page2Appear 1.5s ease;
-}
-
-@keyframes page2Appear {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            scale(0.5)
-            rotate(-8deg);
-    }
-
-    60% {
-
-        transform:
-            scale(1.05)
-            rotate(2deg);
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            scale(1)
-            rotate(0);
-    }
-}
-
-
-.big-heart {
-
-    font-size: 80px;
-
-    animation:
-        heartBeat 1.3s infinite;
-}
-
-@keyframes heartBeat {
-
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    25% {
-        transform: scale(1.2);
-    }
-
-    50% {
-        transform: scale(1);
-    }
-
-    75% {
-        transform: scale(1.15);
-    }
-}
-
-
-.wish-title {
-
-    font-size:
-        clamp(35px, 8vw, 65px);
-
-    margin: 15px 0;
-
-    text-shadow:
-        0 5px 20px rgba(0,0,0,0.3);
-}
-
-.wish-name {
-
-    font-size:
-        clamp(25px, 5vw, 40px);
-
-    font-weight: bold;
-
-    margin-bottom: 25px;
-}
-
-.wish-text {
-
-    font-size: 19px;
-
-    line-height: 2;
-
-    text-align: center;
-
-    animation:
-        textReveal 2s ease;
-}
-
-@keyframes textReveal {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(30px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* =========================
-   PAGE 3
-========================= */
-
-#page3 {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 30;
-
-    display: none;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at top,
-            #ff9a9e,
-            #8e44ad 45%,
-            #2c1654
-        );
-
-    animation:
-        finalBackground 8s infinite alternate;
-}
-
-@keyframes finalBackground {
-
-    from {
-        filter: brightness(1);
-    }
-
-    to {
-        filter: brightness(1.25);
-    }
-}
-
-
-/* =========================
-   FINAL CARD
-========================= */
-
-.final-card {
-
-    width: 90%;
-
-    max-width: 600px;
-
-    padding: 50px 30px;
-
-    border-radius: 35px;
-
-    background:
-        rgba(255,255,255,0.15);
-
-    backdrop-filter:
-        blur(20px);
-
-    border:
-        1px solid
-        rgba(255,255,255,0.35);
-
-    box-shadow:
-        0 30px 80px
-        rgba(0,0,0,0.35);
-
-    animation:
-        finalAppear 1.5s ease;
-}
-
-@keyframes finalAppear {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            scale(0.3)
-            translateY(100px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            scale(1)
-            translateY(0);
-    }
-}
-
-
-/* FINAL EMOJI */
-
-.final-emoji {
-
-    font-size: 90px;
-
-    animation:
-        finalHeart 1.5s infinite;
-}
-
-@keyframes finalHeart {
-
-    0%,100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-}
-
-
-/* FINAL TITLE */
-
-.final-title {
-
-    font-size:
-        clamp(32px, 7vw, 55px);
-
-    margin: 20px 0;
-
-    text-shadow:
-        0 5px 20px
-        rgba(0,0,0,0.3);
-}
-
-
-/* FINAL MESSAGE */
-
-.final-message {
-
-    font-size: 21px;
-
-    line-height: 1.8;
-
-    margin-bottom: 30px;
-
-    animation:
-        finalText 2s ease;
-}
-
-@keyframes finalText {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(30px);
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* =========================
-   FINAL BUTTON
-========================= */
-
-.final-button {
-
-    padding:
-        14px 35px;
-
-    border: none;
-
-    border-radius: 50px;
-
-    background: white;
-
-    color: #8e44ad;
-
-    font-weight: bold;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
-}
-
-.final-button:hover {
-
-    transform:
-        scale(1.1);
-
-    box-shadow:
-        0 10px 30px
-        rgba(255,255,255,0.4);
-}
-
-
-/* =========================
-   SIGNATURE
-========================= */
-
-.signature {
-
-    margin-top: 25px;
-
-    font-size: 19px;
-
-    font-style: italic;
-
-    animation:
-        glow 2s infinite alternate;
-}
-
-@keyframes glow {
-
-    from {
-
-        text-shadow:
-            0 0 5px white;
-    }
-
-    to {
-
-        text-shadow:
-            0 0 20px white,
-            0 0 30px #ffb6c1;
-    }
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width:600px) {
-
-    .card {
-        padding: 35px 20px;
-    }
-
-    .cake {
-        font-size: 65px;
-    }
-
-    .message {
-        font-size: 16px;
-    }
-
-    .wish-card {
-        padding: 35px 20px;
-    }
-
-    .wish-text {
-        font-size: 17px;
-        line-height: 1.8;
-    }
-
-    .big-heart {
-        font-size: 65px;
-    }
-
-    .final-card {
-        padding: 40px 20px;
-    }
-
-    .final-emoji {
-        font-size: 70px;
-    }
-
-    .final-message {
-        font-size: 18px;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Mr Arman 🎂</title>
+
+    <style>
+        /* ======================
+           BASIC
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: "Poppins", "Times New Roman", serif;
+            color: white;
+        }
+
+        /* =========================
+           STARS
+        ========================= */
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.2;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+        }
+
+        /* =========================
+           PAGE 1
+        ========================= */
+
+        #page1 {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #826ef1,
+                    #5513cf,
+                    #8e44ad
+                );
+
+            transition: 1s ease;
+        }
+
+        /* =========================
+           FIRST CARD
+        ========================= */
+
+        .card {
+            width: 90%;
+            max-width: 650px;
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, 0.15);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.25);
+
+            animation: appear 1.5s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform:
+                    translateY(50px)
+                    scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+        /* =========================
+           HEART
+        ========================= */
+
+        .cake {
+            font-size: 80px;
+            margin-bottom: 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        /* =========================
+           HEADINGS
+        ========================= */
+
+        h1 {
+            font-size: clamp(42px, 9vw, 75px);
+            margin-bottom: 10px;
+
+            text-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.25);
+
+            background:
+                linear-gradient(
+                    to right,
+                    #fff,
+                    #ffe1ec
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .name {
+            font-size: clamp(28px, 6vw, 45px);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 50px;
+
+            background: white;
+            color: #393ce6;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            transform: scale(1.08);
+
+            box-shadow:
+                0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* =========================
+           BALLOONS
+        ========================= */
+
+        .balloon {
+            position: fixed;
+            bottom: -150px;
+            font-size: 65px;
+            z-index: 1;
+
+            animation:
+                fly 8s linear infinite;
+        }
+
+        .b1 {
+            left: 8%;
+            animation-delay: 1s;
+        }
+
+        .b2 {
+            left: 80%;
+            animation-delay: 3s;
+        }
+
+        .b3 {
+            left: 45%;
+            animation-delay: 5s;
+        }
+
+        @keyframes fly {
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(-5deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            50% {
+                transform:
+                    translateY(-55vh)
+                    rotate(8deg);
+            }
+
+            100% {
+                transform:
+                    translateY(-120vh)
+                    rotate(-8deg);
+
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           CONFETTI
+        ========================= */
+
+        .confetti {
+            position: fixed;
+
+            width: 10px;
+            height: 10px;
+
+            top: -20px;
+            z-index: 100;
+
+            animation:
+                fall 4s linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+            }
+        }
+
+        /* =========================
+           PAGE 2
+        ========================= */
+
+        #page2 {
+            position: fixed;
+            inset: 0;
+            z-index: 20;
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff758c,
+                    #ff7eb3,
+                    #8e44ad,
+                    #6c5ce7
+                );
+
+            background-size: 400% 400%;
+
+            animation:
+                gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* =========================
+           WISH CARD
+        ========================= */
+
+        .wish-card {
+            width: 95%;
+            max-width: 750px;
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            padding: 45px 35px;
+
+            text-align: center;
+
+            border-radius: 35px;
+
+            background:
+                rgba(255, 255, 255, 0.16);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.35);
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.3);
+
+            animation:
+                page2Appear 1.5s ease;
+        }
+
+        @keyframes page2Appear {
+            0% {
+                opacity: 0;
+
+                transform:
+                    scale(0.5)
+                    rotate(-8deg);
+            }
+
+            60% {
+                transform:
+                    scale(1.05)
+                    rotate(2deg);
+            }
+
+            100% {
+                opacity: 1;
+
+                transform:
+                    scale(1)
+                    rotate(0);
+            }
+        }
+
+        .big-heart {
+            font-size: 80px;
+
+            animation:
+                heartBeat 1.3s infinite;
+        }
+
+        @keyframes heartBeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.2);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.15);
+            }
+        }
+
+        .wish-title {
+            font-size: clamp(35px, 8vw, 65px);
+            margin: 15px 0;
+
+            text-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .wish-name {
+            font-size: clamp(25px, 5vw, 40px);
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .wish-text {
+            font-size: 19px;
+            line-height: 2;
+            text-align: center;
+
+            animation:
+                textReveal 2s ease;
+        }
+
+        .wish-text p {
+            margin-top: 25px;
+        }
+
+        @keyframes textReveal {
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+        /* =========================
+           PAGE 3
+        ========================= */
+
+        #page3 {
+            position: fixed;
+            inset: 0;
+            z-index: 30;
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #ff9a9e,
+                    #8e44ad 45%,
+                    #2c1654
+                );
+
+            animation:
+                finalBackground 8s infinite alternate;
+        }
+
+        @keyframes finalBackground {
+            from {
+                filter: brightness(1);
+            }
+
+            to {
+                filter: brightness(1.25);
+            }
+        }
+
+        /* =========================
+           FINAL CARD
+        ========================= */
+
+        .final-card {
+            width: 90%;
+            max-width: 600px;
+
+            padding: 50px 30px;
+
+            border-radius: 35px;
+
+            background:
+                rgba(255, 255, 255, 0.15);
+
+            backdrop-filter: blur(20px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.35);
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.35);
+
+            animation:
+                finalAppear 1.5s ease;
+        }
+
+        @keyframes finalAppear {
+            from {
+                opacity: 0;
+
+                transform:
+                    scale(0.3)
+                    translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    scale(1)
+                    translateY(0);
+            }
+        }
+
+        /* =========================
+           FINAL EMOJI
+        ========================= */
+
+        .final-emoji {
+            font-size: 90px;
+
+            animation:
+                finalHeart 1.5s infinite;
+        }
+
+        @keyframes finalHeart {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* =========================
+           FINAL TITLE
+        ========================= */
+
+        .final-title {
+            font-size: clamp(32px, 7vw, 55px);
+            margin: 20px 0;
+
+            text-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* =========================
+           FINAL MESSAGE
+        ========================= */
+
+        .final-message {
+            font-size: 21px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+
+            animation:
+                finalText 2s ease;
+        }
+
+        @keyframes finalText {
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+        /* =========================
+           FINAL BUTTON
+        ========================= */
+
+        .final-button {
+            padding: 14px 35px;
+
+            border: none;
+            border-radius: 50px;
+
+            background: white;
+            color: #8e44ad;
+
+            font-weight: bold;
+            font-size: 16px;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .final-button:hover {
+            transform: scale(1.1);
+
+            box-shadow:
+                0 10px 30px rgba(255, 255, 255, 0.4);
+        }
+
+        /* =========================
+           SIGNATURE
+        ========================= */
+
+        .signature {
+            margin-top: 25px;
+
+            font-size: 19px;
+            font-style: italic;
+
+            animation:
+                glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow:
+                    0 0 5px white;
+            }
+
+            to {
+                text-shadow:
+                    0 0 20px white,
+                    0 0 30px #ffb6c1;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .card {
+                padding: 35px 20px;
+            }
+
+            .cake {
+                font-size: 65px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+
+            .wish-card {
+                padding: 35px 20px;
+            }
+
+            .wish-text {
+                font-size: 17px;
+                line-height: 1.8;
+            }
+
+            .big-heart {
+                font-size: 65px;
+            }
+
+            .final-card {
+                padding: 40px 20px;
+            }
+
+            .final-emoji {
+                font-size: 70px;
+            }
+
+            .final-message {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
+    <!-- =========================
+         STARS
+    ========================= -->
 
-<!-- =========================
-     STARS
-========================= -->
-
-<div class="stars" id="stars"></div>
-
-
-<!-- =========================
-     BALLOONS
-========================= -->
-
-<div class="balloon b1">🎈</div>
-<div class="balloon b2">🎈</div>
-<div class="balloon b3">🎈</div>
+    <div class="stars" id="stars"></div>
 
 
-<!-- ==================================================
-     PAGE 1
-================================================== -->
+    <!-- =========================
+         BALLOONS
+    ========================= -->
 
-<section id="page1">
+    <div class="balloon b1">🎈</div>
+    <div class="balloon b2">🎈</div>
+    <div class="balloon b3">🎈</div>
 
-    <div class="card">
 
-        <div class="cake">
-            💖
+    <!-- =========================
+         PAGE 1
+    ========================= -->
+
+    <section id="page1">
+
+        <div class="card">
+
+            <div class="cake">
+                💖
+            </div>
+
+            <h1>
+                Happy Birthday!
+            </h1>
+
+            <div class="name">
+                ✨ Mr Arman ✨
+            </div>
+
+            <p class="message">
+                Wishing you a day filled with happiness, blessings,
+                laughter, beautiful memories, and lots of love! 💖
+
+                <br><br>
+
+                May all your dreams come true and may this new
+                year of your life be more amazing than ever!
+                and your dreams towards your mom dad will comes true inshallah....
+
+                <br><br>
+
+                Enjoy your special day! 🌟
+            </p>
+
+            <button
+                class="button"
+                id="wishButton"
+                onclick="firstClick()"
+            >
+                🎉 Click Here 🎉
+            </button>
+
+            <div style="margin-top: 25px; font-size: 13px; opacity: 0.8;">
+                Made with ❤️ just for you
+            </div>
+
         </div>
 
-        <h1>
-            Happy Birthday!
-        </h1>
+    </section>
 
-        <div class="name">
-            ✨ Mr Arman ✨
+
+    <!-- =========================
+         PAGE 2
+    ========================= -->
+
+    <section id="page2">
+
+        <div class="wish-card">
+
+            <div class="big-heart">
+                💖
+            </div>
+
+            <h2 class="wish-title">
+                Happy Birthday!
+            </h2>
+
+            <div class="wish-name">
+                Mr Arman ji✨
+            </div>
+
+            <div class="wish-text">
+
+                <p>
+                    Today is not just another day...
+                </p>
+
+                <p>
+                    Today is a very special day because
+                    <strong>YOU</strong> were born. ✨
+                </p>
+
+                <p>
+                    Today isn't just a date on the calendar… ✨
+                    It's the day the world became a little brighter
+                    because you were born. 💖
+                </p>
+
+                <p>
+                    Mr Arman,
+                    I hope this new chapter of your life brings you
+                    moments that make you smile when nobody is watching,
+                    people who genuinely value you, and memories you'll
+                    wish you could live twice. 🌙✨
+                </p>
+
+                <p>
+                    <i>
+                        Kuch log zindagi mein tohfe ki tarah aate hain,
+                        Khamoshi se dil mein apni jagah bana jaate hain.
+                        Unki maujoodgi hi kaafi hoti hai muskurane ke liye,
+                        Aur woh door hon to bhi bahut yaad aate hain. 💖
+                    </i>
+                </p>
+
+                <p>
+                    Keep smiling, keep shining,
+                    and always stay the amazing person you are. 🌟
+                </p>
+
+                <p>
+                    Enjoy every single moment of your special day,
+                    because you truly deserve all the happiness
+                    in the world. 🥰🎉
+                </p>
+
+                <p>
+                    You are really a very kind and nice person.
+                    Always be what you are, never change yourself for anything.
+                    The way you are defines you as a best person.
+                    Beauty from the face doesn't matter, but beauty from
+                    the heart matters more than anything...
+                    which I like the most.
+                    Be kind to everyone and be happy always.
+                </p>
+
+                <p>
+                    And yes...
+                </p>
+
+                <p>
+                    This day is very special to me too,
+                    simply because
+                    <strong>today is your birthday.</strong> 💖
+                </p>
+
+                <p>
+                    Once again...
+                </p>
+
+                <p>
+                    <strong>
+                        HAPPY BIRTHDAY, MR ARMAN! 🎉💖
+                    </strong>
+                </p>
+
+            </div>
+
+            <div class="signature">
+                With lots of love ❤️✨
+            </div>
+
+            <!-- GO TO PAGE 3 -->
+
+            <button
+                class="button"
+                style="margin-top: 30px;"
+                onclick="goToFinalPage()"
+            >
+                🎁 Click For One Last Wish 🎁
+            </button>
+
         </div>
 
-        <p class="message">
-
-            Wishing you a day filled with happiness,blessings
-            laughter, beautiful memories, and lots of love! 💖
-
-            <br><br>
-
-            May all your dreams come true and may this new
-            year of your life be more amazing than ever!
-            and your dreams towards your mom dad will comes true inshallah....
-
-            <br>
-
-            Enjoy your special day! 🌟
-
-        </p>
+    </section>
 
 
-        <button
-            class="button"
-            id="wishButton"
-            onclick="firstClick()">
+    <!-- =========================
+         PAGE 3
+    ========================= -->
 
-            🎉 Click Here 🎉
+    <section id="page3">
 
-        </button>
+        <div class="final-card">
 
+            <div class="final-emoji">
+                💖
+            </div>
 
-        <div style="margin-top:25px;font-size:13px;opacity:.8;">
-            Made with ❤️ just for you
+            <h2 class="final-title">
+                Once Again...
+            </h2>
+
+            <p class="final-message">
+
+                🎉 <strong>Happy Birthday, Mr Arman!</strong> 🎉
+
+                <br><br>
+
+                It's the beginning of another beautiful chapter
+                of your story. 📖💫
+
+                May your next chapter be your most unforgettable
+                one yet. ✨
+
+                With lots of love, happiness & countless wishes… 💖
+
+                <br><br>
+
+                Never forget to enjoy the journey.
+
+                Don't wait for everything to be perfect before you
+                allow yourself to be happy.
+
+                Enjoy the small moments.
+
+                Laugh with the people you love.
+
+                Take pictures.
+
+                Make memories.
+
+                Celebrate your little victories.
+
+                Forgive yourself for your mistakes.
+
+                And keep becoming the person you want to be. 🌷
+
+                Keep smiling and keep shining! ❤️
+
+                <br><br>
+
+                Have an amazing day with lots of love & blessings! 🥰
+
+                <br><br>
+
+                <strong>
+                    Byeee! 👋💖
+                </strong>
+
+            </p>
+
+            <div class="signature">
+                Made with ❤️ especially for you
+            </div>
+
+            <button
+                class="final-button"
+                onclick="celebrateAgain()"
+            >
+                🎉 Celebrate Again 🎉
+            </button>
+
         </div>
 
-    </div>
+    </section>
 
-</section>
 
+    <script>
 
-<!-- ==================================================
-     PAGE 2
-================================================== -->
+        /* ==================================================
+           CREATE STARS
+        ================================================== */
 
-<section id="page2">
+        const stars = document.getElementById("stars");
 
-    <div class="wish-card">
+        for (let i = 0; i < 80; i++) {
 
-        <div class="big-heart">
-            💖
-        </div>
+            const star = document.createElement("div");
 
+            star.classList.add("star");
 
-        <h2 class="wish-title">
-            Happy Birthday!
-        </h2>
+            star.style.left =
+                Math.random() * 100 + "%";
 
+            star.style.top =
+                Math.random() * 100 + "%";
 
-        <div class="wish-name">
-            Mr Arman ji✨
-        </div>
+            star.style.animationDelay =
+                Math.random() * 2 + "s";
 
+            stars.appendChild(star);
+        }
 
-        <p class="wish-text">
 
-            Today is not just another day...
+        /* ==================================================
+           BUTTON 1
+        ================================================== */
 
-            <br>
+        let clickedOnce = false;
 
-            Today is a very special day because
-            <strong>YOU</strong> were born.✨
+        function firstClick() {
 
-            <br><br>
-            Today isn't just a date on the calendar… ✨
-            It's the day the world became a little brighter because you were born. 💖
-            <br><br>
-           Mr Arman,
-           I hope this new chapter of your life brings you moments that make you smile when nobody is watching,
-           people who genuinely value you, and memories you'll wish you could live twice. 🌙✨
-            <br><br>
-           <i>Kuch log zindagi mein tohfe ki tarah aate hain,
-           Khamoshi se dil mein apni jagah bana jaate hain.
-           Unki maujoodgi hi kaafi hoti hai muskurane ke liye,
-           Aur woh door hon to bhi bahut yaad aate hain. 💖</i>
-                     <br>Keep smiling, keep shining,
-            and always stay the amazing person you are. 🌟
-            <br><br>
-            Enjoy every single moment of your special day,
-            because you truly deserve all the happiness
-            in the world. 🥰🎉
-            <p>you are really a very kind and nice person always be what you 
-            are never change your self for anything..The way you are is Define You a 
-            best person beauty from face does't matter but beauty from heart is matter 
-            more than anything .....which i like the most be kind for everyone and be happy always.</p>
+            const button =
+                document.getElementById("wishButton");
 
-            <br><br>
+            if (!clickedOnce) {
 
-            And yes...
+                clickedOnce = true;
 
-            <br>
+                createConfetti();
 
-            This day is very special to me too,
-            simply because
-            <strong>today is your birthday.</strong> 💖
+                button.innerHTML =
+                    "💖 Best Wishes! 💖";
 
-            <br><br>
+            } else {
 
-            Once again...
+                goToWishPage();
 
-            <br>
+            }
+        }
 
-            <strong>
-                HAPPY BIRTHDAY, MR ARMAN! 🎉💖
-            </strong>
 
-        </p>
+        /* ==================================================
+           CONFETTI
+        ================================================== */
 
+        function createConfetti() {
 
-        <div class="signature">
-            With lots of love ❤️✨
-        </div>
+            for (let i = 0; i < 180; i++) {
 
+                const confetti =
+                    document.createElement("div");
 
-        <!-- GO TO PAGE 3 -->
+                confetti.classList.add("confetti");
 
-        <button
-            class="button"
-            style="margin-top:30px;"
-            onclick="goToFinalPage()">
+                const colors = [
+                    "#ff4757",
+                    "#ffd32a",
+                    "#05c46b",
+                    "#18dcff",
+                    "#ff6b81",
+                    "#ffffff",
+                    "#9b59b6",
+                    "#feca57"
+                ];
 
-            🎁 Click For One Last Wish 🎁
+                confetti.style.background =
+                    colors[
+                        Math.floor(
+                            Math.random() * colors.length
+                        )
+                    ];
 
-        </button>
+                confetti.style.left =
+                    Math.random() * 100 + "vw";
 
-    </div>
+                confetti.style.animationDuration =
+                    Math.random() * 3 + 2 + "s";
 
-</section>
+                confetti.style.width =
+                    Math.random() * 8 + 6 + "px";
 
+                confetti.style.height =
+                    Math.random() * 8 + 6 + "px";
 
-<!-- ==================================================
-     PAGE 3
-================================================== -->
+                document.body.appendChild(confetti);
 
-<section id="page3">
+                setTimeout(() => {
+                    confetti.remove();
+                }, 6000);
+            }
+        }
 
-    <div class="final-card">
 
-        <div class="final-emoji">
-            💖
-        </div>
+        /* ==================================================
+           GO TO PAGE 2
+        ================================================== */
 
+        function goToWishPage() {
 
-        <h2 class="final-title">
-            Once Again...
-        </h2>
+            const page1 =
+                document.getElementById("page1");
 
+            const page2 =
+                document.getElementById("page2");
 
-        <p class="final-message">
+            createConfetti();
 
-            🎉 <strong>Happy Birthday, Mr Arman!</strong> 🎉
+            page1.style.opacity = "0";
 
-            <br><br>
+            page1.style.transform =
+                "scale(0.7) translateY(-50px)";
 
-            It's the beginning of another beautiful chapter of your story. 📖💫
-            May your next chapter be your most unforgettable one yet. ✨
-            With lots of love, happiness & countless wishes… 💖
-            <br><br>
-         Never forget to enjoy the journey.
-           Don't wait for everything to be perfect before you allow yourself to be happy.
-           Enjoy the small moments.
-           Laugh with the people you love. Take pictures. Make memories. 
-           Celebrate your little victories. Forgive yourself for your mistakes. And keep becoming the person you want to be. 🌷
-           
-            Keep smiling and keep shining! ❤️
+            setTimeout(() => {
 
-            <br><br>
+                page1.style.display =
+                    "none";
 
-            Have an amazing day with lots of love & blessings! 🥰
+                page2.style.display =
+                    "flex";
 
-            <br><br>
+                createConfetti();
 
-            <strong>
-                Byeee! 👋💖
-            </strong>
+            }, 900);
+        }
 
-        </p>
 
+        /* ==================================================
+           GO TO PAGE 3
+        ================================================== */
 
-        <div class="signature">
-            Made with ❤️ especially for you
-        </div>
+        function goToFinalPage() {
 
+            const page2 =
+                document.getElementById("page2");
 
-        <button
-            class="final-button"
-            onclick="celebrateAgain()">
+            const page3 =
+                document.getElementById("page3");
 
-            🎉 Celebrate Again 🎉
+            /* Big celebration */
 
-        </button>
+            createConfetti();
+            createConfetti();
 
-    </div>
+            /* Hide page 2 */
 
-</section>
+            page2.style.opacity = "0";
 
+            page2.style.transform =
+                "scale(0.7)";
 
-<script>
+            setTimeout(() => {
 
-/* ==================================================
-   CREATE STARS
-================================================== */
+                page2.style.display =
+                    "none";
 
-const stars =
-    document.getElementById("stars");
+                page3.style.display =
+                    "flex";
 
-for (let i = 0; i < 80; i++) {
+                /* Final confetti */
 
-    const star =
-        document.createElement("div");
+                createConfetti();
+                createConfetti();
 
-    star.classList.add("star");
+            }, 1000);
+        }
 
-    star.style.left =
-        Math.random() * 100 + "%";
 
-    star.style.top =
-        Math.random() * 100 + "%";
+        /* ==================================================
+           FINAL CELEBRATION BUTTON
+        ================================================== */
 
-    star.style.animationDelay =
-        Math.random() * 2 + "s";
+        function celebrateAgain() {
 
-    stars.appendChild(star);
-}
+            createConfetti();
+            createConfetti();
+            createConfetti();
 
+        }
 
-/* ==================================================
-   BUTTON 1
-================================================== */
-
-let clickedOnce = false;
-
-
-function firstClick() {
-
-    const button =
-        document.getElementById("wishButton");
-
-
-    if (!clickedOnce) {
-
-        clickedOnce = true;
-
-        createConfetti();
-
-
-        button.innerHTML =
-            "💖 Best Wishes! 💖";
-
-    }
-
-    else {
-
-        goToWishPage();
-
-    }
-}
-
-
-/* ==================================================
-   CONFETTI
-================================================== */
-
-function createConfetti() {
-
-    for (let i = 0; i < 180; i++) {
-
-        const confetti =
-            document.createElement("div");
-
-        confetti.classList.add("confetti");
-
-
-        const colors = [
-
-            "#ff4757",
-            "#ffd32a",
-            "#05c46b",
-            "#18dcff",
-            "#ff6b81",
-            "#ffffff",
-            "#9b59b6",
-            "#feca57"
-
-        ];
-
-
-        confetti.style.background =
-            colors[
-                Math.floor(
-                    Math.random() *
-                    colors.length
-                )
-            ];
-
-
-        confetti.style.left =
-            Math.random() * 100 + "vw";
-
-
-        confetti.style.animationDuration =
-            Math.random() * 3 + 2 + "s";
-
-
-        confetti.style.width =
-            Math.random() * 8 + 6 + "px";
-
-
-        confetti.style.height =
-            Math.random() * 8 + 6 + "px";
-
-
-        document.body.appendChild(confetti);
-
-
-        setTimeout(() => {
-
-            confetti.remove();
-
-        }, 6000);
-
-    }
-}
-
-
-/* ==================================================
-   GO TO PAGE 2
-================================================== */
-
-function goToWishPage() {
-
-    const page1 =
-        document.getElementById("page1");
-
-    const page2 =
-        document.getElementById("page2");
-
-
-    createConfetti();
-
-
-    page1.style.opacity = "0";
-
-    page1.style.transform =
-        "scale(0.7) translateY(-50px)";
-
-
-    setTimeout(() => {
-
-        page1.style.display =
-            "none";
-
-        page2.style.display =
-            "flex";
-
-        createConfetti();
-
-    }, 900);
-}
-
-
-/* ==================================================
-   GO TO PAGE 3
-================================================== */
-
-function goToFinalPage() {
-
-    const page2 =
-        document.getElementById("page2");
-
-    const page3 =
-        document.getElementById("page3");
-
-
-    /* Big celebration */
-
-    createConfetti();
-
-    createConfetti();
-
-
-    /* Hide page 2 */
-
-    page2.style.opacity = "0";
-
-    page2.style.transform =
-        "scale(0.7)";
-
-
-    setTimeout(() => {
-
-        page2.style.display =
-            "none";
-
-        page3.style.display =
-            "flex";
-
-
-        /* Final confetti */
-
-        createConfetti();
-
-        createConfetti();
-
-    }, 1000);
-}
-
-
-/* ==================================================
-   FINAL CELEBRATION BUTTON
-================================================== */
-
-function celebrateAgain() {
-
-    createConfetti();
-
-    createConfetti();
-
-    createConfetti();
-
-}
-
-</script>
+    </script>
 
 </body>
+
 </html>
