@@ -8,9 +8,10 @@
     <title>Happy Birthday Mr Arman 🎂</title>
 
     <style>
-        /* ======================
+
+        /* =====================================================
            BASIC
-        ========================= */
+        ===================================================== */
 
         * {
             margin: 0;
@@ -18,30 +19,36 @@
             box-sizing: border-box;
         }
 
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
         body {
             min-height: 100vh;
             overflow: hidden;
-            font-family: "Poppins", "Times New Roman", serif;
+            font-family: "Poppins",'Times New Roman', Times, serif;
             color: white;
         }
 
-        /* =========================
-           BACKGROUND MUSIC BUTTON
-        ========================= */
+
+        /* =====================================================
+           MUSIC BUTTON
+        ===================================================== */
 
         #musicControl {
             position: fixed;
             top: 20px;
             right: 20px;
-
-            z-index: 9999;
+            z-index: 99999;
 
             border: none;
             border-radius: 50px;
 
-            padding: 12px 18px;
+            padding: 12px 20px;
 
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             color: #8e44ad;
 
             font-size: 14px;
@@ -50,7 +57,7 @@
             cursor: pointer;
 
             box-shadow:
-                0 5px 20px rgba(0, 0, 0, 0.25);
+                0 8px 25px rgba(0, 0, 0, 0.25);
 
             transition: 0.3s;
         }
@@ -63,24 +70,30 @@
             transform: scale(0.95);
         }
 
-        /* =========================
+
+        /* =====================================================
            STARS
-        ========================= */
+        ===================================================== */
 
         .stars {
             position: fixed;
             inset: 0;
+
             overflow: hidden;
-            z-index: 0;
+
+            z-index: 1;
+
             pointer-events: none;
         }
 
         .star {
             position: absolute;
+
             width: 4px;
             height: 4px;
 
             background: white;
+
             border-radius: 50%;
 
             animation:
@@ -88,6 +101,7 @@
         }
 
         @keyframes twinkle {
+
             from {
                 opacity: 0.2;
                 transform: scale(0.7);
@@ -95,23 +109,28 @@
 
             to {
                 opacity: 1;
-                transform: scale(1.4);
+                transform: scale(1.5);
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            PAGE 1
-        ========================= */
+        ===================================================== */
 
         #page1 {
-            min-height: 100vh;
+            position: fixed;
+            inset: 0;
+
+            z-index: 5;
 
             display: flex;
+
             justify-content: center;
             align-items: center;
 
-            position: relative;
-            z-index: 2;
+            padding: 20px;
 
             background:
                 linear-gradient(
@@ -124,9 +143,10 @@
             transition: 1s ease;
         }
 
-        /* =========================
-           FIRST CARD
-        ========================= */
+
+        /* =====================================================
+           PAGE 1 CARD
+        ===================================================== */
 
         .card {
             width: 90%;
@@ -155,8 +175,10 @@
         }
 
         @keyframes appear {
+
             from {
                 opacity: 0;
+
                 transform:
                     translateY(50px)
                     scale(0.9);
@@ -164,18 +186,22 @@
 
             to {
                 opacity: 1;
+
                 transform:
                     translateY(0)
                     scale(1);
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            HEART
-        ========================= */
+        ===================================================== */
 
         .cake {
             font-size: 80px;
+
             margin-bottom: 10px;
 
             animation:
@@ -183,6 +209,7 @@
         }
 
         @keyframes heartbeat {
+
             0%,
             100% {
                 transform: scale(1);
@@ -191,14 +218,17 @@
             50% {
                 transform: scale(1.15);
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            HEADINGS
-        ========================= */
+        ===================================================== */
 
         h1 {
             font-size: clamp(42px, 9vw, 75px);
+
             margin-bottom: 10px;
 
             text-shadow:
@@ -217,30 +247,38 @@
 
         .name {
             font-size: clamp(28px, 6vw, 45px);
+
             font-weight: bold;
+
             margin-bottom: 20px;
         }
 
         .message {
             font-size: 18px;
+
             line-height: 1.8;
+
             margin-bottom: 30px;
         }
 
-        /* =========================
+
+        /* =====================================================
            BUTTON
-        ========================= */
+        ===================================================== */
 
         .button {
             padding: 14px 30px;
 
             border: none;
+
             border-radius: 50px;
 
             background: white;
+
             color: #393ce6;
 
             font-size: 16px;
+
             font-weight: bold;
 
             cursor: pointer;
@@ -255,16 +293,17 @@
             transform: scale(1.08);
 
             box-shadow:
-                0 12px 25px rgba(0, 0, 0, 0.3);
+                0 12px 30px rgba(0, 0, 0, 0.3);
         }
 
         .button:active {
             transform: scale(0.95);
         }
 
-        /* =========================
+
+        /* =====================================================
            BALLOONS
-        ========================= */
+        ===================================================== */
 
         .balloon {
             position: fixed;
@@ -273,7 +312,7 @@
 
             font-size: 65px;
 
-            z-index: 1;
+            z-index: 3;
 
             pointer-events: none;
 
@@ -297,6 +336,7 @@
         }
 
         @keyframes fly {
+
             0% {
                 transform:
                     translateY(0)
@@ -322,11 +362,13 @@
 
                 opacity: 0;
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            CONFETTI
-        ========================= */
+        ===================================================== */
 
         .confetti {
             position: fixed;
@@ -336,7 +378,7 @@
 
             top: -20px;
 
-            z-index: 100;
+            z-index: 1000;
 
             pointer-events: none;
 
@@ -345,16 +387,19 @@
         }
 
         @keyframes fall {
+
             to {
                 transform:
                     translateY(110vh)
                     rotate(720deg);
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            PAGE 2
-        ========================= */
+        ===================================================== */
 
         #page2 {
             position: fixed;
@@ -385,6 +430,7 @@
         }
 
         @keyframes gradientMove {
+
             0% {
                 background-position: 0% 50%;
             }
@@ -396,11 +442,13 @@
             100% {
                 background-position: 0% 50%;
             }
+
         }
 
-        /* =========================
-           WISH CARD
-        ========================= */
+
+        /* =====================================================
+           PAGE 2 CARD
+        ===================================================== */
 
         .wish-card {
             width: 95%;
@@ -444,6 +492,7 @@
         }
 
         @keyframes page2Appear {
+
             0% {
                 opacity: 0;
 
@@ -465,6 +514,7 @@
                     scale(1)
                     rotate(0);
             }
+
         }
 
         .big-heart {
@@ -475,6 +525,7 @@
         }
 
         @keyframes heartBeat {
+
             0%,
             100% {
                 transform: scale(1);
@@ -491,6 +542,7 @@
             75% {
                 transform: scale(1.15);
             }
+
         }
 
         .wish-title {
@@ -516,16 +568,17 @@
             line-height: 2;
 
             text-align: center;
-
-            animation:
-                textReveal 2s ease;
         }
 
         .wish-text p {
             margin-top: 25px;
+
+            animation:
+                textReveal 1s ease both;
         }
 
         @keyframes textReveal {
+
             from {
                 opacity: 0;
 
@@ -539,17 +592,490 @@
                 transform:
                     translateY(0);
             }
+
         }
 
-        /* =========================
-           PAGE 3
-        ========================= */
+
+        /* =====================================================
+           NEW PAGE 3
+           SPECIAL MESSAGE
+        ===================================================== */
 
         #page3 {
             position: fixed;
             inset: 0;
 
             z-index: 30;
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            overflow: hidden;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #ffb6c1,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    #8e44ad,
+                    transparent 40%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #24113f,
+                    #5e2a7c,
+                    #d64f86
+                );
+        }
+
+
+        /* floating hearts */
+
+        .floating-heart {
+            position: absolute;
+
+            bottom: -50px;
+
+            font-size: 25px;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            animation:
+                floatHeart 7s linear infinite;
+        }
+
+        .heart1 {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart2 {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .heart3 {
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .heart4 {
+            left: 75%;
+            animation-delay: 1s;
+        }
+
+        .heart5 {
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatHeart {
+
+            0% {
+                transform:
+                    translateY(0)
+                    scale(0.5)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.8;
+            }
+
+            50% {
+                transform:
+                    translateY(-50vh)
+                    scale(1.2)
+                    rotate(20deg);
+            }
+
+            100% {
+                transform:
+                    translateY(-115vh)
+                    scale(0.7)
+                    rotate(-20deg);
+
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =====================================================
+           SPECIAL MESSAGE CARD
+        ===================================================== */
+
+        .special-card {
+            position: relative;
+
+            width: 92%;
+            max-width: 700px;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            padding: 45px 35px;
+
+            border-radius: 40px;
+
+            background:
+                rgba(255, 255, 255, 0.13);
+
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.3);
+
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, 0.45);
+
+            animation:
+                specialAppear 1.5s cubic-bezier(.17,.67,.3,1.3);
+        }
+
+        .special-card::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .special-card::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,.4);
+            border-radius: 20px;
+        }
+
+        @keyframes specialAppear {
+
+            0% {
+                opacity: 0;
+
+                transform:
+                    translateY(100px)
+                    scale(0.5)
+                    rotate(-5deg);
+            }
+
+            70% {
+                transform:
+                    translateY(-10px)
+                    scale(1.03)
+                    rotate(1deg);
+            }
+
+            100% {
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1)
+                    rotate(0);
+            }
+
+        }
+
+
+        /* =====================================================
+           SPECIAL ICON
+        ===================================================== */
+
+        .special-icon {
+            font-size: 75px;
+
+            display: inline-block;
+
+            animation:
+                specialHeart 1.5s infinite;
+        }
+
+        @keyframes specialHeart {
+
+            0%,
+            100% {
+                transform:
+                    scale(1)
+                    rotate(0);
+            }
+
+            25% {
+                transform:
+                    scale(1.2)
+                    rotate(-5deg);
+            }
+
+            50% {
+                transform:
+                    scale(1)
+                    rotate(5deg);
+            }
+
+            75% {
+                transform:
+                    scale(1.15)
+                    rotate(-3deg);
+            }
+
+        }
+
+
+        /* =====================================================
+           SPECIAL TITLE
+        ===================================================== */
+
+        .special-title {
+            margin-top: 15px;
+
+            font-size: clamp(30px, 7vw, 55px);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #fff,
+                    #ffd6e7,
+                    #fff
+                );
+
+            background-size: 200% auto;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                titleShine 3s linear infinite;
+        }
+
+        @keyframes titleShine {
+
+            to {
+                background-position: 200% center;
+            }
+
+        }
+
+
+        /* =====================================================
+           SPECIAL NAME
+        ===================================================== */
+
+        .special-name {
+            margin-top: 12px;
+
+            font-size: clamp(22px, 5vw, 34px);
+
+            font-weight: bold;
+
+            color: #ffe5f0;
+
+            animation:
+                fadeDown 1.5s ease;
+        }
+
+
+        /* =====================================================
+           SPECIAL CONTENT
+        ===================================================== */
+
+        .special-content {
+            margin-top: 30px;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+        }
+
+        .special-content p {
+            margin: 20px 0;
+
+            animation:
+                messageAppear 1s ease both;
+        }
+
+        .special-content p:nth-child(1) {
+            animation-delay: .3s;
+        }
+
+        .special-content p:nth-child(2) {
+            animation-delay: .6s;
+        }
+
+        .special-content p:nth-child(3) {
+            animation-delay: .9s;
+        }
+
+        .special-content p:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .special-content p:nth-child(5) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes messageAppear {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+        @keyframes fadeDown {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* =====================================================
+           SPECIAL QUOTE
+        ===================================================== */
+
+        .special-quote {
+            margin: 30px 0;
+
+            padding: 22px;
+
+            border-left:
+                4px solid #ffb6d9;
+
+            border-right:
+                4px solid #ffb6d9;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255, 255, 255, 0.08);
+
+            font-style: italic;
+
+            color: #ffe9f2;
+
+            animation:
+                quoteGlow 2s infinite alternate;
+        }
+
+        @keyframes quoteGlow {
+
+            from {
+                box-shadow:
+                    0 0 5px rgba(255,255,255,.05);
+            }
+
+            to {
+                box-shadow:
+                    0 0 25px rgba(255,182,217,.25);
+            }
+
+        }
+
+
+        /* =====================================================
+           PAGE 3 NEXT BUTTON
+        ===================================================== */
+
+        .next-button {
+            margin-top: 25px;
+
+            padding: 15px 32px;
+
+            border: none;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff,
+                    #ffe0ed
+                );
+
+            color: #8e44ad;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,.25);
+
+            transition: .3s;
+
+            animation:
+                buttonPulse 2s infinite;
+        }
+
+        .next-button:hover {
+            transform:
+                scale(1.08)
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 40px rgba(255,255,255,.35);
+        }
+
+        @keyframes buttonPulse {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 10px 30px rgba(0,0,0,.25);
+            }
+
+            50% {
+                box-shadow:
+                    0 10px 35px rgba(255,182,217,.55);
+            }
+
+        }
+
+
+        /* =====================================================
+           PAGE 4
+           FINAL PAGE
+        ===================================================== */
+
+        #page4 {
+            position: fixed;
+            inset: 0;
+
+            z-index: 40;
 
             display: none;
 
@@ -573,6 +1099,7 @@
         }
 
         @keyframes finalBackground {
+
             from {
                 filter: brightness(1);
             }
@@ -580,11 +1107,13 @@
             to {
                 filter: brightness(1.25);
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            FINAL CARD
-        ========================= */
+        ===================================================== */
 
         .final-card {
             width: 90%;
@@ -611,20 +1140,10 @@
 
             animation:
                 finalAppear 1.5s ease;
-
-            scrollbar-width: thin;
-        }
-
-        .final-card::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .final-card::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
         }
 
         @keyframes finalAppear {
+
             from {
                 opacity: 0;
 
@@ -640,11 +1159,8 @@
                     scale(1)
                     translateY(0);
             }
-        }
 
-        /* =========================
-           FINAL EMOJI
-        ========================= */
+        }
 
         .final-emoji {
             font-size: 90px;
@@ -654,6 +1170,7 @@
         }
 
         @keyframes finalHeart {
+
             0%,
             100% {
                 transform: scale(1);
@@ -662,11 +1179,8 @@
             50% {
                 transform: scale(1.2);
             }
-        }
 
-        /* =========================
-           FINAL TITLE
-        ========================= */
+        }
 
         .final-title {
             font-size: clamp(32px, 7vw, 55px);
@@ -676,10 +1190,6 @@
             text-shadow:
                 0 5px 20px rgba(0, 0, 0, 0.3);
         }
-
-        /* =========================
-           FINAL MESSAGE
-        ========================= */
 
         .final-message {
             font-size: 21px;
@@ -693,6 +1203,7 @@
         }
 
         @keyframes finalText {
+
             from {
                 opacity: 0;
 
@@ -706,11 +1217,8 @@
                 transform:
                     translateY(0);
             }
-        }
 
-        /* =========================
-           FINAL BUTTON
-        ========================= */
+        }
 
         .final-button {
             padding: 14px 35px;
@@ -739,9 +1247,10 @@
                 0 10px 30px rgba(255, 255, 255, 0.4);
         }
 
-        /* =========================
+
+        /* =====================================================
            SIGNATURE
-        ========================= */
+        ===================================================== */
 
         .signature {
             margin-top: 25px;
@@ -755,6 +1264,7 @@
         }
 
         @keyframes glow {
+
             from {
                 text-shadow:
                     0 0 5px white;
@@ -765,11 +1275,13 @@
                     0 0 20px white,
                     0 0 30px #ffb6c1;
             }
+
         }
 
-        /* =========================
+
+        /* =====================================================
            MOBILE
-        ========================= */
+        ===================================================== */
 
         @media (max-width: 600px) {
 
@@ -807,6 +1319,24 @@
                 font-size: 65px;
             }
 
+            .special-card {
+                padding: 35px 20px;
+            }
+
+            .special-icon {
+                font-size: 65px;
+            }
+
+            .special-content {
+                font-size: 16px;
+
+                line-height: 1.8;
+            }
+
+            .special-quote {
+                padding: 16px;
+            }
+
             .final-card {
                 padding: 40px 20px;
             }
@@ -822,58 +1352,68 @@
             .balloon {
                 font-size: 50px;
             }
+
         }
+
     </style>
+
 </head>
 
 
 <body>
 
-    <!-- ==================================================
-         BACKGROUND MUSIC
-    ================================================== -->
 
-    <audio id="bgMusic" loop preload="auto">
-        <source src="birthday.mpeg" type="audio/mpeg">
-        Your browser does not support the audio element.
+    <!-- =====================================================
+         BACKGROUND MUSIC
+    ===================================================== -->
+
+    <audio
+        id="bgMusic"
+        loop
+        preload="auto">
+
+        <source
+            src="birthday.mpeg"
+            type="audio/mpeg">
+
     </audio>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          MUSIC CONTROL
-    ================================================== -->
+    ===================================================== -->
 
     <button
         id="musicControl"
-        onclick="toggleMusic()"
-        aria-label="Play or pause music"
-    >
-        🎵 Music
+        onclick="toggleMusic()">
+
+        🎵 Play Music
+
     </button>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          STARS
-    ================================================== -->
+    ===================================================== -->
 
     <div
         class="stars"
-        id="stars"
-    ></div>
+        id="stars">
+    </div>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          BALLOONS
-    ================================================== -->
+    ===================================================== -->
 
     <div class="balloon b1">🎈</div>
     <div class="balloon b2">🎈</div>
     <div class="balloon b3">🎈</div>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          PAGE 1
-    ================================================== -->
+    ===================================================== -->
 
     <section id="page1">
 
@@ -917,20 +1457,22 @@
             <button
                 class="button"
                 id="wishButton"
-                onclick="firstClick()"
-            >
+                onclick="firstClick()">
+
                 🎉 Click Here 🎉
+
             </button>
 
 
             <div
                 style="
-                    margin-top: 25px;
-                    font-size: 13px;
-                    opacity: 0.8;
-                "
-            >
+                    margin-top:25px;
+                    font-size:13px;
+                    opacity:.8;
+                ">
+
                 Made with ❤️ just for you
+
             </div>
 
         </div>
@@ -938,9 +1480,9 @@
     </section>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          PAGE 2
-    ================================================== -->
+    ===================================================== -->
 
     <section id="page2">
 
@@ -1042,14 +1584,15 @@
             </div>
 
 
-            <!-- GO TO PAGE 3 -->
+            <!-- PAGE 2 -> PAGE 3 -->
 
             <button
                 class="button"
-                style="margin-top: 30px;"
-                onclick="goToFinalPage()"
-            >
-                🎁 Click For One Last Wish 🎁
+                style="margin-top:30px;"
+                onclick="goToSpecialPage()">
+
+                🌙 There's Something More... 🌙
+
             </button>
 
         </div>
@@ -1057,17 +1600,173 @@
     </section>
 
 
-    <!-- ==================================================
-         PAGE 3
-    ================================================== -->
+    <!-- =====================================================
+         NEW PAGE 3
+         SPECIAL MESSAGE
+    ===================================================== -->
 
     <section id="page3">
+
+
+        <!-- FLOATING HEARTS -->
+
+        <div class="floating-heart heart1">💗</div>
+        <div class="floating-heart heart2">💖</div>
+        <div class="floating-heart heart3">💕</div>
+        <div class="floating-heart heart4">💗</div>
+        <div class="floating-heart heart5">💖</div>
+
+
+        <div class="special-card">
+
+
+            <div class="special-icon">
+                🌙💖
+            </div>
+
+
+            <h2 class="special-title">
+                A Little Something
+            </h2>
+
+
+            <div class="special-name">
+                For You, Mr Arman ✨
+            </div>
+
+
+            <div class="special-content">
+
+                <p>
+                    Sometimes, a simple birthday wish
+                    doesn't feel enough... 🌷
+                </p>
+
+                <p>
+                    Because some people deserve more than
+                    just a <strong>"Happy Birthday."</strong>
+                </p>
+
+                <p>
+                    So before you reach the final wish,
+                    I wanted to leave one little message here...
+                    
+                </p>
+
+
+                <div class="special-quote">
+
+                    "May life give you countless reasons
+                    to smile, people who make your heart feel
+                    at home, and moments that you will remember
+                    forever." ✨
+
+                </div>
+
+
+                <p>
+                    I hope you always have the courage to chase
+                    your dreams, the strength to overcome difficult
+                    days, and the heart to appreciate the beautiful
+                    little things in life. 🌸
+                </p>
+
+                <p>
+                    May your parents always be proud of you,
+                    may your family always stay happy and healthy,
+                    and may every prayer you make for the people
+                    you love find its way to reality. 🤲❤️
+                </p>
+
+                <p>
+                    And whenever life becomes difficult,
+                    remember that difficult days don't last forever.
+                    Keep going, keep believing, and keep that beautiful
+                    smile of yours alive. 🌟
+                </p>
+
+                <p>
+                    There are so many beautiful moments waiting
+                    for you in the future...
+                </p>
+
+                <p>
+                    So don't rush.
+
+                    Enjoy the journey.
+
+                    Enjoy the people around you.
+
+                    Make memories.
+
+                    Dream bigger.
+
+                    And most importantly...
+
+                    <strong>
+                        never stop being yourself. 💖
+                    </strong>
+                </p>
+
+
+                <div class="special-quote">
+
+                    ✨ You deserve happiness.
+                    You deserve peace.
+                    You deserve beautiful memories.
+                    And you deserve a life filled with reasons
+                    to smile. ✨
+
+                </div>
+
+
+                <p>
+                    Once again, from the bottom of my heart...
+                </p>
+
+                <p>
+                    <strong>
+                        Happy Birthday, Arman ji! 🎂💖
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="signature">
+                Keep smiling... the best moments are still ahead. 🌙✨
+            </div>
+
+
+            <!-- GO TO FINAL PAGE -->
+
+            <button
+                class="next-button"
+                onclick="goToFinalPage()">
+
+                🎁 Go To Your Last Wish 🎁
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 4
+         FINAL WISH
+    ===================================================== -->
+
+    <section id="page4">
+
 
         <div class="final-card">
 
             <div class="final-emoji">
                 💖
             </div>
+
 
             <h2 class="final-title">
                 Once Again...
@@ -1103,10 +1802,6 @@
 
                 Laugh with the people you love.
 
-                Take pictures.
-
-                Make memories.
-
                 Celebrate your little victories.
 
                 Forgive yourself for your mistakes.
@@ -1117,7 +1812,8 @@
 
                 <br><br>
 
-                Have an amazing day with lots of love & blessings! 🥰
+                Have an amazing day with lots of love & blessings! 
+                inshaallah upcoming brithday we celebrate together🥰
 
                 <br><br>
 
@@ -1135,9 +1831,10 @@
 
             <button
                 class="final-button"
-                onclick="celebrateAgain()"
-            >
+                onclick="celebrateAgain()">
+
                 🎉 Celebrate Again 🎉
+
             </button>
 
         </div>
@@ -1145,15 +1842,16 @@
     </section>
 
 
-    <!-- ==================================================
+    <!-- =====================================================
          JAVASCRIPT
-    ================================================== -->
+    ===================================================== -->
 
     <script>
 
-        /* ==================================================
+
+        /* =====================================================
            MUSIC
-        ================================================== */
+        ===================================================== */
 
         const music =
             document.getElementById("bgMusic");
@@ -1164,10 +1862,6 @@
 
         let musicStarted = false;
 
-
-        /*
-         * Start music
-         */
 
         function startMusic() {
 
@@ -1184,22 +1878,15 @@
                     })
                     .catch(() => {
 
-                        /*
-                         * Browser may block audio.
-                         * User can press Music button.
-                         */
-
                         musicControl.innerHTML =
                             "🎵 Play Music";
 
                     });
+
             }
+
         }
 
-
-        /*
-         * Play / Pause music
-         */
 
         function toggleMusic() {
 
@@ -1221,25 +1908,29 @@
 
                     });
 
-            } else {
+            }
+
+            else {
 
                 music.pause();
 
                 musicControl.innerHTML =
                     "🔇 Music Off";
+
             }
+
         }
 
 
-        /* ==================================================
+        /* =====================================================
            CREATE STARS
-        ================================================== */
+        ===================================================== */
 
         const stars =
             document.getElementById("stars");
 
 
-        for (let i = 0; i < 80; i++) {
+        for (let i = 0; i < 100; i++) {
 
             const star =
                 document.createElement("div");
@@ -1256,22 +1947,18 @@
                 Math.random() * 2 + "s";
 
             stars.appendChild(star);
+
         }
 
 
-        /* ==================================================
-           BUTTON 1
-        ================================================== */
+        /* =====================================================
+           PAGE 1 BUTTON
+        ===================================================== */
 
         let clickedOnce = false;
 
 
         function firstClick() {
-
-            /*
-             * Start music when visitor interacts.
-             * This avoids browser autoplay problems.
-             */
 
             startMusic();
 
@@ -1289,17 +1976,20 @@
                 button.innerHTML =
                     "💖 Best Wishes! Click Again 💖";
 
-            } else {
+            }
+
+            else {
 
                 goToWishPage();
 
             }
+
         }
 
 
-        /* ==================================================
+        /* =====================================================
            CONFETTI
-        ================================================== */
+        ===================================================== */
 
         function createConfetti() {
 
@@ -1350,9 +2040,7 @@
                     Math.random() * 8 + 6 + "px";
 
 
-                document.body.appendChild(
-                    confetti
-                );
+                document.body.appendChild(confetti);
 
 
                 setTimeout(() => {
@@ -1362,18 +2050,15 @@
                 }, 6000);
 
             }
+
         }
 
 
-        /* ==================================================
-           GO TO PAGE 2
-        ================================================== */
+        /* =====================================================
+           PAGE 1 -> PAGE 2
+        ===================================================== */
 
         function goToWishPage() {
-
-            /*
-             * Keep music playing.
-             */
 
             startMusic();
 
@@ -1391,7 +2076,6 @@
             page1.style.opacity =
                 "0";
 
-
             page1.style.transform =
                 "scale(0.7) translateY(-50px)";
 
@@ -1401,26 +2085,21 @@
                 page1.style.display =
                     "none";
 
-
                 page2.style.display =
                     "flex";
-
 
                 createConfetti();
 
             }, 900);
+
         }
 
 
-        /* ==================================================
-           GO TO PAGE 3
-        ================================================== */
+        /* =====================================================
+           PAGE 2 -> NEW PAGE 3
+        ===================================================== */
 
-        function goToFinalPage() {
-
-            /*
-             * Make sure music stays on.
-             */
+        function goToSpecialPage() {
 
             startMusic();
 
@@ -1428,30 +2107,18 @@
             const page2 =
                 document.getElementById("page2");
 
-
             const page3 =
                 document.getElementById("page3");
 
 
-            /*
-             * Big celebration
-             */
-
             createConfetti();
 
-            createConfetti();
-
-
-            /*
-             * Hide page 2
-             */
 
             page2.style.opacity =
                 "0";
 
-
             page2.style.transform =
-                "scale(0.7)";
+                "scale(0.8)";
 
 
             setTimeout(() => {
@@ -1459,32 +2126,66 @@
                 page2.style.display =
                     "none";
 
-
                 page3.style.display =
                     "flex";
 
+                createConfetti();
 
-                /*
-                 * Final confetti
-                 */
+            }, 900);
+
+        }
+
+
+        /* =====================================================
+           PAGE 3 -> PAGE 4
+        ===================================================== */
+
+        function goToFinalPage() {
+
+            startMusic();
+
+
+            const page3 =
+                document.getElementById("page3");
+
+            const page4 =
+                document.getElementById("page4");
+
+
+            createConfetti();
+
+            createConfetti();
+
+
+            page3.style.opacity =
+                "0";
+
+            page3.style.transform =
+                "scale(0.7)";
+
+
+            setTimeout(() => {
+
+                page3.style.display =
+                    "none";
+
+                page4.style.display =
+                    "flex";
 
                 createConfetti();
 
                 createConfetti();
 
             }, 1000);
+
         }
 
 
-        /* ==================================================
-           FINAL CELEBRATION BUTTON
-        ================================================== */
+        /* =====================================================
+           FINAL CELEBRATION
+        ===================================================== */
 
         function celebrateAgain() {
-
-            /*
-             * Keep music playing
-             */
 
             startMusic();
 
@@ -1495,7 +2196,27 @@
 
             createConfetti();
 
+            createConfetti();
+
         }
+
+
+        /* =====================================================
+           TRY MUSIC AFTER FIRST USER INTERACTION
+        ===================================================== */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                if (!musicStarted) {
+                    startMusic();
+                }
+
+            },
+            { once: true }
+        );
+
 
     </script>
 
